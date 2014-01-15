@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <title>
+            {% block title %}- SympleBlog{%endblock %}
+        </title>
+            <link href="/reset.css" type="text/css" rel="stylesheet" />
+            <link href="/main.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <div id="top">
+            <a class="title" href="/app_dev.php">SympleBlog</a>
+            <div class="links">
+                {% if app.user is not empty %}
+                    <a href="/app_dev.php/profile">{{ app.user.username }}</a> - <a href="/app_dev.php/logout">Logout</a>
+                {% else %}
+                    <a href="/app_dev.php/login">Connect</a> - <a href="/app_dev.php/register">Register</a>
+                {% endif %}
+            </div>
+        </div>
+        {% block flashes %}
+            {% if app.session.getFlashes() is not empty %}
+                <div class="flashcontainer">
+                {% for class, flash in app.session.getFlashes() %}
+                    <span class={{class}}>{{flash|trans({}, 'FOSUserBundle') }}</span>
+                {% endfor %}
+                </div>
+            {% endif %}
+        {% endblock %}
+        <h1>{% block pagename %}{% endblock %}</h1>
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+        <div id="footer">
+            {% block footer %}{% endblock %}
+        </div>
     </body>
 </html>

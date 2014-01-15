@@ -1,0 +1,25 @@
+{% extends "::base.html.twig" %}
+
+{% block title%}Home {{ parent() }}{% endblock %}
+{% block top %}
+{% endblock %}
+{% block pagename %}Your wall{% endblock %}
+{% block content %}
+        {% for post in posts %}
+            <div class="post">
+                <h2>By {{ post.user.username }}</h2>
+                <p>{{ post.message }}</p>
+                <span>{{ post.date|date("Y-d-m H:i:s") }}</span>
+            </div>
+        {% endfor %}
+
+        <form class="wall" action="#" method="POST">
+            <textarea name="message" cols="" rows=""></textarea>
+            <input type="submit" value="Submit!"/>
+        </form>
+{% endblock %}
+{% block footer %}
+    <span>Copyright SympleBlog&copy;</span>
+{% endblock %}
+    
+    

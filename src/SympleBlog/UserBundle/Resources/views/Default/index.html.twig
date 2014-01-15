@@ -1,0 +1,21 @@
+{% extends "::base.html.twig" %}
+
+{% block title%}Accueil {{ parent() }}{% endblock %}
+
+{% block content %}
+    <!--<span>Hello {#{firstname}} {{lastname}#} !</span>-->
+    {#% for item in array %}
+        <a href="#">{{ item }}</a>
+    {% endfor %#}
+    {#% import "::funcs.html.twig" as funcs %}
+    {{ funcs.input("text") }}
+    {{ funcs.input("button") }#}
+        
+    {{ myDate|date("d-m-Y h:i:s") }}
+        
+{% endblock %}
+{% block footer %}
+    <span>Copyright SympleBlog&copy;</span>
+{% endblock %}
+    
+    
