@@ -2,14 +2,14 @@
 <html>
     <head>
         <title>
-            {% block title %}- SympleBlog{%endblock %}
+            {% block title %}- Symple{%endblock %}
         </title>
             <link href="/reset.css" type="text/css" rel="stylesheet" />
             <link href="/main.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         <div id="top">
-            <a class="title" href="/app_dev.php">SympleBlog</a>
+            <a class="title" href="/app_dev.php">Symple</a>
             <div class="links">
                 {% if app.user is not empty %}
                     <a href="/app_dev.php/profile">{{ app.user.username }}</a> - <a href="/app_dev.php/logout">Logout</a>

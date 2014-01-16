@@ -1,5 +1,5 @@
-SympleBlogUserBundle:
-    resource: "@SympleBlogUserBundle/Controller"
+SympleUserBundle:
+    resource: "@SympleUserBundle/Controller"
     type:     annotation
     prefix:   /
     
@@ -9,4 +9,4 @@ SympleBlogUserBundle:
 #   prefix:   /_internal
 
 _user_bundle:
-  resource: "@SympleBlogUserBundle/Resources/config/routing.yml"
+  resource: "@SympleUserBundle/Resources/config/routing.yml"

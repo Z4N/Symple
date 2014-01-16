@@ -6,7 +6,7 @@
 
     <!--
     <parameters>
-        <parameter key="symple_network_user.example.class">SympleBlog\UserBundle\Example</parameter>
+        <parameter key="symple_network_user.example.class">Symple\UserBundle\Example</parameter>
     </parameters>
 
     <services>

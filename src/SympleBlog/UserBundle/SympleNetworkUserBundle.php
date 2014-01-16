@@ -1,10 +1,10 @@
 <?php
 
-namespace SympleBlog\UserBundle;
+namespace Symple\UserBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class SympleBlogUserBundle extends Bundle
+class SympleUserBundle extends Bundle
 {
     public function getParent() {
         return "FOSUserBundle";

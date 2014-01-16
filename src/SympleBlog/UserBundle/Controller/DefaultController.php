@@ -1,12 +1,12 @@
 <?php
 
-namespace SympleBlog\UserBundle\Controller;
+namespace Symple\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
-use SympleBlog\UserBundle\Entity\Post as Post;
+use Symple\UserBundle\Entity\Post as Post;
 
 class DefaultController extends Controller {
 
@@ -35,7 +35,7 @@ class DefaultController extends Controller {
         }
         
         // Display page
-        $query = $em->createQuery("select p from SympleBlog\UserBundle\Entity\Post p where p.user = :user");
+        $query = $em->createQuery("select p from Symple\UserBundle\Entity\Post p where p.user = :user");
         $query->setParameter("user", $user);
         $posts = $query->execute();
         return array("posts" => $posts);

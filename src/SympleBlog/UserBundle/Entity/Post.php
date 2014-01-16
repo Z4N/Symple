@@ -1,11 +1,11 @@
 <?php
 
-namespace SympleBlog\UserBundle\Entity;
+namespace Symple\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * SympleBlog\UserBundle\Entity\Post
+ * Symple\UserBundle\Entity\Post
  *
  * @ORM\Table(name="posts")
  * @ORM\Entity
@@ -100,9 +100,9 @@ class Post
     /**
      * Set user
      *
-     * @param SympleBlog\UserBundle\Entity\User $user
+     * @param Symple\UserBundle\Entity\User $user
      */
-    public function setUser(\SympleBlog\UserBundle\Entity\User $user)
+    public function setUser(\Symple\UserBundle\Entity\User $user)
     {
         $this->user = $user;
     }
@@ -110,7 +110,7 @@ class Post
     /**
      * Get user
      *
-     * @return SympleBlog\UserBundle\Entity\User
+     * @return Symple\UserBundle\Entity\User
      */
     public function getUser()
     {
